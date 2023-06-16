@@ -1,0 +1,42 @@
+body {
+}
+.logoimg {
+  position: sticky;
+}
+.navcontainer {
+  display: flex;
+}
+ul {
+  list-style-type: style type none;
+  text-align: center;
+  position: relative;
+  left: 1vh;
+}
+li {
+  display: inline block;
+  float: left;
+  list-style-type: none;
+  overflow: hidden;
+  padding: 15px;
+  margin: 0, auto;
+}
+/*here is where the card css starts*/
+
+.allcards1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  clear: both;
+}
+.allcards2 {
+  display: flex;
+  margin: 0, auto;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 10px;
+}
+.nav2 {
+  position: sticky;
+  margin-top: 20px;
+}

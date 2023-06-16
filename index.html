@@ -10,6 +10,8 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <script
@@ -17,5 +19,157 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <!-- code starts here-->
+    <!--nav bar starts here-->
+    <nav class="navbar bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            class="logoimg"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAA4CAMAAABnuDDbAAAAbFBMVEX/////REr/P0b/3N3/QUj/Rkz/+vr/SU//6+z/8vL/kpX/5+j/S1H/PUT/UFb/tbf/d3v/1db/sbP/rK7/wcP/l5r/bnL/4uP/oqX/YGX/p6n/VVr/c3f/0NH/hon/fID/Nj3/Zmv/jI//yMmpdqfGAAACKUlEQVRIie1V25arIAwlys0LKtY7Uqv+/z8OoOP0TFvGvpx5mSwXElc2SXYSROhPfl14GL2LGDHG01uoKIU4X0DRNzAFaLNWcD0PkTh27yu0pzEN2TJJ8HQWonG97xYcnsTM7JMwDsVZN92xj086+nJz2pEG5yZqo/OOGjDGbWP6YEyMozPUSTCktYTE5QKMG+pO1KjAkS1Q6+DGRxL82AyhbYEIFqdMjNpmSH7AXLGJhweDU2qg+yk+SbCNhJLdT+qiBf9MxNhlPDtjuhVH3tX4iUTBVsIcKrOWbjUngA8zuLkxHlK1L1ZWyD0Y1e+b3FRpgXXXstkT2lfkTRqzowNieD3kPDiCiJTqD8PBwxyFoxRcZf1huHH+QqZ9qFGbpTlTfFMS8FU1wbOzyyENkSbMcZ30/qJqINchVkHDnXGg6uEKTPogJo84E1B8klyNILL6xHVKPdqvir64V1jzu49t7R279Obumep2fwvom5e5dZvQKrg/WQcvLqywG8KSywqVOh9W0N2QIFqGl06aqlVD9+T6yQVTADImCLO0WTNQRGgqiMqCVWZEMVF9h5g5pmYwwzpDZLK/qwpFc+aaNpukGTo6ku+lkoG2i8VYO5dPhUMwNDaFtPmsD0mFIv8XY7jucOIwk8Pk4iGjnuVrww5MOukLKVCwYdioS/Y44HwWosEyZkgsNp9GiJHSm6F+HqXVmmetyrlpSOoe25qco61D7adN+5P/Lh+8Vx09ZSTsWQAAAABJRU5ErkJggg=="
+            alt="arbnb logo"
+          />
+        </a>
+        <ul>
+          <li>Anywhere</li>
+          <li>Anyweek</li>
+          <li style="color: lightslategray">Add guests</li>
+          <li>
+            <img
+              src="data:image/png;base64,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"
+              alt="search picture (pink)"
+              width="26vh"
+              height="26vh"
+            />
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--nav bar ends here-->
+    <!--2nd nav bar starts here-->
+    <nav class="nav2">
+      <ul bac>
+        <li>Amazing Pools</li>
+        <li>Rooms</li>
+        <li>Amazing Views</li>
+        <li>OMG!</li>
+        <li>Golfing</li>
+        <li>Tinyhomes</li>
+      </ul>
+    </div>
+
+     <!--2nd nav bar starts here-->
+    <!--cards div starts here-->
+    <div class="allcards1">
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-903833808733078412/original/cea42156-1296-48db-be0c-def8921dd447.jpeg?im_w=720"
+          class="card-img-top"
+          alt="photo fo a house"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <p style="color: black; font-weight: bold">Price:$$x</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-769600600773330465/original/185af7b9-dad6-4c9b-b40d-76e0c4786d6e.jpeg?im_w=720"
+          alt="photo of a house"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <p style="color: black; font-weight: bold">Price:$$x</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a0.muscache.com/im/pictures/488c8c20-09e8-4085-8fdc-3d7ca19719cf.jpg?im_w=720"
+          alt="photo of a house"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <p style="color: black; font-weight: bold">Price:$$x</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a0.muscache.com/im/pictures/21dda479-82a0-41f3-a269-ca42b11a9db3.jpg?im_w=720"
+          alt="photo of a house"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <p style="color: black; font-weight: bold">Price:$$x</p>
+        </div>
+      </div>
+    </div>
+    <div class="allcards2">
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-742236703974417491/original/87496e03-537e-4ae8-9740-154ee23e082d.jpeg?im_w=720"
+          class="card-img-top"
+          alt="photo fo a house"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <p style="color: black; font-weight: bold">Price:$$x</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-898643986779552756/original/c280c4b5-bff4-4368-a372-a26cf0138d8a.jpeg?im_w=720"
+          alt="photo of a house"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <p style="color: black; font-weight: bold">Price:$$x</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-880060965085894925/original/d64d1fb4-5ac0-48c3-bf82-82f4d82cd837.jpeg?im_w=720"
+          alt="photo of a house"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <p style="color: black; font-weight: bold">Price:$$x</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-861793572773401947/original/d9dd3a19-51e7-4c98-a9b8-283a74f7b407.jpeg?im_w=720"
+          alt="photo of a house"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <p style="color: black; font-weight: bold">Price:$$x</p>
+        </div>
+      </div>
+    </div>
+    <!--cards div ends here-->
   </body>
 </html>
